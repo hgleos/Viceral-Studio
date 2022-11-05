@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037599398}
   m_Layer: 0
-  m_Name: This is HL
+  m_Name: Test for merge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
