@@ -47,7 +47,10 @@ public class PlayerPickUp : MonoBehaviour
     private void PickUp(string tag)
     {
         if (tag == "Flashlight")
+        {
             showHide.hasFlashLight = true;
+
+        }
         else if (tag == "LevelOneKey")
             keyBehavior.hasLevelOnekey = true;
     }

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class KeyBehavior : MonoBehaviour
 {
-    [SerializeField] private LayerMask pickableLayerMask;
-    [SerializeField] private Transform playerCameraTransform;
-    [SerializeField] GameObject pickUpUI;
     [SerializeField] GameObject key;
 
     private RaycastHit hit;
@@ -21,7 +18,6 @@ public class KeyBehavior : MonoBehaviour
             {
                 key.SetActive(false);
                 done = true;
-                
             }
         }
             

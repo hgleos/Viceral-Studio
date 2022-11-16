@@ -688,11 +688,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5429680763290987752, guid: 5d9666a0bcb3a644f98984eb74cad427, type: 3}
   m_PrefabInstance: {fileID: 205066348}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &386462921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2015179707230592864, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
-  m_PrefabInstance: {fileID: 1033113771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &957232974
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +871,10 @@ PrefabInstance:
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 337931738}
+    - target: {fileID: 2015179707347726050, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
+      propertyPath: flashlightUI
+      value: 
+      objectReference: {fileID: 1618000738}
     - target: {fileID: 2015179707347726051, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
       propertyPath: pickUpUI
       value: 
@@ -894,11 +893,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
---- !u!4 &1232470122 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2015179707184091055, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
-  m_PrefabInstance: {fileID: 1033113771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1297501970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -973,11 +967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec746529179c4004db49a05a234f4220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickableLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  playerCameraTransform: {fileID: 1232470122}
-  pickUpUI: {fileID: 386462921}
   key: {fileID: 1652612967}
   hasLevelOnekey: 0
 --- !u!1 &1485690042
@@ -1127,12 +1116,12 @@ GameObject:
   - component: {fileID: 1618000741}
   - component: {fileID: 1618000740}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: flashlightUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1618000739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1150,8 +1139,8 @@ RectTransform:
   m_Father: {fileID: 227552743}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1265,8 +1254,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289642700
+  m_fontColor: {r: 0.8000001, g: 0.75294125, b: 0.68235296, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
