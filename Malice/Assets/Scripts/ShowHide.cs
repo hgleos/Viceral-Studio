@@ -22,9 +22,10 @@ public class ShowHide : MonoBehaviour
         {
             if(hasFlashLight)
             {
+                spotlightBool = !spotlightBool;
                 FlashlightInHand.SetActive(true);
                 Flashlight.SetActive(false);
-                SpotLight.SetActive(!spotlightBool);
+                SpotLight.SetActive(spotlightBool);
                 ArmRigLayer.weight = 1;
                 FingerRigLayer.weight = 1;
                 flashlightUI.SetActive(true);
