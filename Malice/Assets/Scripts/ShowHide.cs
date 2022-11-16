@@ -9,6 +9,7 @@ public class ShowHide : MonoBehaviour
     public GameObject FlashlightInHand;
     public GameObject SpotLight;
     public GameObject Flashlight;
+    public GameObject flashlightUI;
     public Rig ArmRigLayer;
     public Rig FingerRigLayer;
 
@@ -26,6 +27,7 @@ public class ShowHide : MonoBehaviour
                 SpotLight.SetActive(!spotlightBool);
                 ArmRigLayer.weight = 1;
                 FingerRigLayer.weight = 1;
+                flashlightUI.SetActive(true);
                 done = true;
             }
             else
