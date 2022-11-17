@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class BasePatrolScript : MonoBehaviour
+public class PatrolScript2 : MonoBehaviour
 {
     public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public GameObject stalker;
@@ -11,7 +11,7 @@ public class BasePatrolScript : MonoBehaviour
     public float speedWalk = 6;                     //  Walking speed, speed in the nav mesh agent
     public float speedRun = 9;                      //  Running speed
  
-    public float viewRadius = 30;                   //  Radius of the enemy view
+    public float viewRadius = 15;                   //  Radius of the enemy view
     public float viewAngle = 90;                    //  Angle of the enemy view
     public LayerMask playerMask;                    //  To detect the player with the raycast
     public LayerMask obstacleMask;                  //  To detect the obstacules with the raycast
@@ -48,12 +48,12 @@ public class BasePatrolScript : MonoBehaviour
  
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
-        navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
+        navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);   //  Set the destination to the first waypoint
     }
  
     private void Update()
     {
-        EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
+            EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
  
         if (!m_IsPatrol)
         {
@@ -73,12 +73,12 @@ public class BasePatrolScript : MonoBehaviour
  
         if (!m_CaughtPlayer)
         {
-            Move(speedRun);
+            Run(speedRun);
             navMeshAgent.SetDestination(m_PlayerPosition);          //  set the destination of the enemy to the player location
         }
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)    //  Control if the enemy arrive to the player location
         {
-                if (m_WaitTime <= 0 && !m_CaughtPlayer && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >= 6f)
+            if (m_WaitTime <= 0 && !m_CaughtPlayer && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >= 6f)
             {
                 //  Check if the enemy is not near to the player, returns to patrol after the wait time delay
                 m_IsPatrol = true;
@@ -162,6 +162,13 @@ public class BasePatrolScript : MonoBehaviour
         navMeshAgent.speed = speed;
         stalker.GetComponent<Animator>().Play("Walking");
     }
+
+    void Run(float speed)
+    {
+        navMeshAgent.isStopped = false;
+        navMeshAgent.speed = speed;
+        stalker.GetComponent<Animator>().Play("Mutant Run");
+    }
  
     void CaughtPlayer()
     {
@@ -216,7 +223,7 @@ public class BasePatrolScript : MonoBehaviour
             if (Vector3.Distance(transform.position, player.position) > viewRadius)
             {
                 /*
-                 *  If the player is further than the view radius, then the enemy will no longer keep the player's current position.
+                *  If the player is further than the view radius, then the enemy will no longer keep the player's current position.
                  *  Or the enemy is a safe zone, the enemy will no chase
                  * */
                 m_playerInRange = false;                //  Change the sate of chasing
