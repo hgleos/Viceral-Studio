@@ -27,7 +27,7 @@ public class JumpTrigger : MonoBehaviour
 
     IEnumerator EndJump()
     {
-        yield return new WaitForSeconds(2.03f);
+        yield return new WaitForSeconds(1.5f);
         RImage.SetActive(false);
         JumpCam.SetActive(false);
         FlashImg.SetActive(false);
