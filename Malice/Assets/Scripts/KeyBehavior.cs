@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyBehavior : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class KeyBehavior : MonoBehaviour
             {
                 key.SetActive(false);
                 done = true;
+                // This is what loads the Death Scene, move it to your script and I guess it will get triggered when the player is hit the second time.
+                // SceneManager.LoadScene(2);
             }
         }
             
