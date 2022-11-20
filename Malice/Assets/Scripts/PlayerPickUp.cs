@@ -14,7 +14,6 @@ public class PlayerPickUp : MonoBehaviour
     [SerializeField] KeyBehavior keyBehavior;
 
     private RaycastHit hit;
-    private string tag;
 
     private void Update()
     {
