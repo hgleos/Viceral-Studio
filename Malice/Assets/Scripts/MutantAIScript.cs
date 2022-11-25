@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 public class MutantAIScript : MonoBehaviour
 {
     public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
@@ -32,6 +33,8 @@ public class MutantAIScript : MonoBehaviour
     bool m_PlayerNear;                              //  If the player is near, state of hearing
     bool m_IsPatrol;                                //  If the enemy is patrol, state of patroling
     bool m_CaughtPlayer;                            //  if the enemy has caught the player
+    bool attackTrigger = false;
+    bool isAttacking = false;
  
     void Start()
     {
@@ -96,6 +99,10 @@ public class MutantAIScript : MonoBehaviour
                 m_WaitTime -= Time.deltaTime;
             }
         }
+        // if (navMeshAgent.remainingDistance == 0)
+        // {
+        
+        // }
     }
  
     private void Patrolling()
@@ -138,9 +145,13 @@ public class MutantAIScript : MonoBehaviour
         }
     }
  
-    private void OnAnimatorMove()
+    IEnumerator InflictDamage()
     {
- 
+        isAttacking = true;
+        yield return new WaitForSeconds(1.1f);
+        GlobalHealth.currentHealth -= 10;
+        yield return new WaitForSeconds(0.5f);
+        isAttacking = false;
     }
  
     public void NextPoint()
@@ -174,6 +185,7 @@ public class MutantAIScript : MonoBehaviour
     void CaughtPlayer()
     {
         m_CaughtPlayer = true;
+        
     }
  
     void LookingPlayer(Vector3 player)
