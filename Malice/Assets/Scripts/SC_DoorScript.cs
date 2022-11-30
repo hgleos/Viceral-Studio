@@ -15,6 +15,8 @@ public class SC_DoorScript : MonoBehaviour
     float currentRotationAngle;
     float openTime = 0;
 
+    public KeyBehavior doorKey;
+
     void Start()
     {
         defaultRotationAngle = transform.localEulerAngles.y;
@@ -39,6 +41,12 @@ public class SC_DoorScript : MonoBehaviour
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
         }
+
+        if(doorKey.hasLevelOnekey)
+        {
+            hasKey = true;
+        }
+
     }
 
     // Display a simple info message when player is inside the trigger area (This is for testing purposes only so you can remove it)
@@ -46,7 +54,12 @@ public class SC_DoorScript : MonoBehaviour
     {
         if (enter && !hasKey)
         {
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 155, 30), "Door is Locked");
+            GUIStyle myStyle = new GUIStyle();
+            myStyle.fontSize = 100;
+            myStyle.normal.textColor = Color.white;
+
+            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 400, 155, 300), "Door is Locked", myStyle);
+
         }   
         else if (enter)
         {
