@@ -700,67 +700,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bab19842fc2b8e44837b5c42192679d, type: 3}
---- !u!1001 &310341707
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2342482682310146178, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: doorKey
-      value: 
-      objectReference: {fileID: 1351460873}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.887
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.2230947
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.019
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342482682310146183, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
 --- !u!1001 &331583079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -838,6 +777,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2342482682193721141, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bada796a4c5b07146abe3fe0e461abd5, type: 2}
     - target: {fileID: 2342482682310146178, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
       propertyPath: doorKey
       value: 
@@ -848,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2342482682310146181, guid: 2de6fd1b39f235c459d567dc3ce6171b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1553,6 +1496,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1351460880}
     m_Modifications:
+    - target: {fileID: 2152738663334283660, guid: 38972b5ef0f540d408be1d9a3f783a04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.289
+      objectReference: {fileID: 0}
     - target: {fileID: 7574198788601854130, guid: 38972b5ef0f540d408be1d9a3f783a04, type: 3}
       propertyPath: m_Name
       value: ZombieCamera

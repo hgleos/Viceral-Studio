@@ -52,18 +52,18 @@ public class SC_DoorScript : MonoBehaviour
     // Display a simple info message when player is inside the trigger area (This is for testing purposes only so you can remove it)
     void OnGUI()
     {
+        GUIStyle myStyle = new GUIStyle();
+        myStyle.fontSize = 36;
+        myStyle.normal.textColor = Color.white;
+
         if (enter && !hasKey)
         {
-            GUIStyle myStyle = new GUIStyle();
-            myStyle.fontSize = 100;
-            myStyle.normal.textColor = Color.white;
-
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 400, 155, 300), "Door is Locked", myStyle);
+            GUI.Label(new Rect(Screen.width / 2 - 25, Screen.height - 500, 155, 30), "Door is Locked", myStyle);
 
         }   
         else if (enter)
         {
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 155, 30), "E to Interact");
+            GUI.Label(new Rect(Screen.width / 2 - 25, Screen.height - 500, 155, 30), "E to Interact", myStyle);
         }
     }
     //
