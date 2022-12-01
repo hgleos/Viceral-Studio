@@ -47,6 +47,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+Malice/UserSettings/Layouts/default-2021.dwlt
 
 # Unity3D generated file on crash reports
 sysinfo.txt
