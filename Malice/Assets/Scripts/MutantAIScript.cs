@@ -35,6 +35,9 @@ public class MutantAIScript : MonoBehaviour
     bool m_CaughtPlayer;                            //  if the enemy has caught the player
     bool attackTrigger = false;
     bool isAttacking = false;
+
+    [SerializeField] private Animator anim;
+    [SerializeField] private CurrentState m_CurrentState;
  
     void Start()
     {
@@ -45,19 +48,20 @@ public class MutantAIScript : MonoBehaviour
         m_PlayerNear = false;
         m_WaitTime = startWaitTime;                 //  Set the wait time variable that will change
         m_TimeToRotate = timeToRotate;
- 
         m_CurrentWaypointIndex = 0;                 //  Set the initial waypoint
         navMeshAgent = GetComponent<NavMeshAgent>();
  
         navMeshAgent.isStopped = false;
-        navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
+        navMeshAgent.speed = speedWalk;
+        m_CurrentState = CurrentState.Walking;             //  Set the navmesh speed with the normal speed of the enemy
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);   //  Set the destination to the first waypoint
     }
  
     private void Update()
     {
-        EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
- 
+        EnviromentView();                           //  Check whether or not the player is in the enemy's field of vision
+        AnimationChecker();
+
         if (!m_IsPatrol)
         {
             Chasing();
@@ -67,13 +71,33 @@ public class MutantAIScript : MonoBehaviour
             Patrolling();
         }
     }
+
+    private void AnimationChecker()
+    {
+        if (m_CurrentState == CurrentState.Idle)
+        {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isRunning", false);
+        }
+        else if (m_CurrentState == CurrentState.Walking)
+        {
+            anim.SetBool("isWalking", true);
+            anim.SetBool("isRunning", false);
+        }
+        else if (m_CurrentState == CurrentState.Running)
+        {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isRunning", true);
+        }
+    }
  
     private void Chasing()
     {
         //  The enemy is chasing the player
-        m_PlayerNear = false;                       //  Set false that hte player is near beacause the enemy already sees the player
+        m_PlayerNear = false;                       //  Set false that the player is near because the enemy already sees the player
         playerLastPosition = Vector3.zero;          //  Reset the player near position
- 
+        m_CurrentState = CurrentState.Running;
+
         if (!m_CaughtPlayer)
         {
             Run(speedRun);
@@ -107,9 +131,10 @@ public class MutantAIScript : MonoBehaviour
  
     private void Patrolling()
     {
+        m_CurrentState = CurrentState.Walking;
         if (m_PlayerNear)
         {
-            //  Check if the enemy detect near the player, so the enemy will move to that position
+            //  Check if the enemy detects near the player, so the enemy will move to that position
             if (m_TimeToRotate <= 0)
             {
                 Move(speedWalk);
@@ -117,14 +142,14 @@ public class MutantAIScript : MonoBehaviour
             }
             else
             {
-                //  The enemy wait for a moment and then go to the last player position
+                //  The enemy waits for a moment and then goes to the last player position
                 Stop();
                 m_TimeToRotate -= Time.deltaTime;
             }
         }
         else
         {
-            m_PlayerNear = false;           //  The player is no near when the enemy is platroling
+            m_PlayerNear = false;           //  The player is not near when the enemy is platroling
             playerLastPosition = Vector3.zero;
             navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the enemy destination to the next waypoint
             if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
@@ -158,26 +183,26 @@ public class MutantAIScript : MonoBehaviour
     {
         m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
-        stalker.GetComponent<Animator>().Play("Walking");
+        m_CurrentState = CurrentState.Walking;
     }
  
     void Stop()
     {
-        stalker.GetComponent<Animator>().Play("Idle");
+        m_CurrentState = CurrentState.Idle;
         navMeshAgent.isStopped = true;
         navMeshAgent.speed = 0;
     }
  
     void Move(float speed)
     {
-        stalker.GetComponent<Animator>().Play("Walking");
+        //m_CurrentState = CurrentState.Walking;
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speed;
     }
 
     void Run(float speed)
     {
-        stalker.GetComponent<Animator>().Play("Mutant Run");
+        //m_CurrentState = CurrentState.Running;
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speed;
     }
@@ -249,5 +274,12 @@ public class MutantAIScript : MonoBehaviour
                 m_PlayerPosition = player.transform.position;       //  Save the player's current position if the player is in range of vision
             }
         }
+    }
+
+    enum CurrentState
+    {
+        Idle,
+        Walking,
+        Running
     }
 }
