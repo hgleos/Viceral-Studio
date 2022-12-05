@@ -2860,7 +2860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818409799312122303, guid: 72ffa2c3fc4e16b4ca96d264fc0e062b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4818409799352383993, guid: 72ffa2c3fc4e16b4ca96d264fc0e062b, type: 3}
       propertyPath: m_Layer
@@ -3216,6 +3216,7 @@ GameObject:
   - component: {fileID: 448319087}
   - component: {fileID: 448319086}
   - component: {fileID: 448319085}
+  - component: {fileID: 448319090}
   - component: {fileID: 448319089}
   - component: {fileID: 448319084}
   m_Layer: 0
@@ -3362,6 +3363,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!54 &448319090
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448319083}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &625305323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4731,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2015179707184091053, guid: 710ce3f0651f18147a63f0cd5e6cbe06, type: 3}
   m_PrefabInstance: {fileID: 1033113771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1351460881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351460865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8582d4221ce4b4d977100805964dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalHealth: 0
 --- !u!1 &1475664463
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,11 +5220,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b911662f2b94547e8a834cff9d26a788, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 15c4292ce39a3fd44a129828d89fd429, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -78,17 +78,26 @@ public class MutantAIScript : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isRunning", false);
+            //anim.SetBool("isAttacking", false);
         }
         else if (m_CurrentState == CurrentState.Walking)
         {
             anim.SetBool("isWalking", true);
             anim.SetBool("isRunning", false);
+            //anim.SetBool("isAttacking", false);
         }
         else if (m_CurrentState == CurrentState.Running)
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isRunning", true);
+            //anim.SetBool("isAttacking", false);
         }
+        // else if (m_CurrentState == CurrentState.Attacking)
+        // {
+        //     anim.SetBool("isWalking", false);
+        //     anim.SetBool("isRunning", false);
+        //     anim.SetBool("isAttacking", true);
+        // }
     }
  
     private void Chasing()
@@ -123,9 +132,17 @@ public class MutantAIScript : MonoBehaviour
                 m_WaitTime -= Time.deltaTime;
             }
         }
-        // if (navMeshAgent.remainingDistance == 0)
+        // if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 0.5f)
         // {
-        
+        //     //m_CaughtPlayer = true;
+        //     attackTrigger = true;
+        //     m_CurrentState = CurrentState.Attacking;
+        // }
+        // else
+        // {
+        //     m_CaughtPlayer = false;
+        //     attackTrigger = false;
+        //     m_CurrentState = CurrentState.Running;
         // }
     }
  
@@ -169,15 +186,34 @@ public class MutantAIScript : MonoBehaviour
             }
         }
     }
+
+    // private void Attacking()
+    // {
+    //     //m_CurrentState = CurrentState.Attacking;
+    //     StartCoroutine(InflictDamage());
+    // }
+
+    // private void OnTriggerEnter(Collider other) 
+    // {
+    //     attackTrigger = true;
+    //     m_CurrentState = CurrentState.Attacking;
+    // }
+
+    // private void OnTriggerExit(Collider other) 
+    // {
+    //     attackTrigger = false;  
+    // }
  
-    IEnumerator InflictDamage()
-    {
-        isAttacking = true;
-        yield return new WaitForSeconds(1.1f);
-        GlobalHealth.currentHealth -= 10;
-        yield return new WaitForSeconds(0.5f);
-        isAttacking = false;
-    }
+    // IEnumerator InflictDamage()
+    // {
+    //     isAttacking = true;
+    //     Stop();
+    //     m_CurrentState = CurrentState.Attacking;
+    //     yield return new WaitForSeconds(1.1f);
+    //     GlobalHealth.currentHealth -= 5;
+    //     yield return new WaitForSeconds(0.2f);
+    //     isAttacking = false;
+    // }
  
     public void NextPoint()
     {
@@ -280,6 +316,7 @@ public class MutantAIScript : MonoBehaviour
     {
         Idle,
         Walking,
-        Running
+        Running,
+        Attacking
     }
 }
