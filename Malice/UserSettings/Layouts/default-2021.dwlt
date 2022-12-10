@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 44
+  controlID: 2623
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 45
+  controlID: 2624
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 107
+  controlID: 2625
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,10 +296,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 485
+    x: 291.4
     y: 19
-    width: 1469
-    height: 748
+    width: 880.4
+    height: 407
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -346,23 +346,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1469
-      height: 727
-    m_Scale: {x: 0.6310764, y: 0.6310764}
-    m_Translation: {x: 734.5, y: 363.5}
+      width: 1536
+      height: 682.8
+    m_Scale: {x: 0.59270835, y: 0.59270835}
+    m_Translation: {x: 768.00006, y: 341.40002}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1163.8844
+      x: -1295.747
       y: -576
-      width: 2327.7688
+      width: 2591.494
       height: 1152
     m_MinimalGUI: 1
-  m_defaultScale: 0.6310764
-  m_LastWindowPixelSize: {x: 1836.25, y: 935}
+  m_defaultScale: 0.59270835
+  m_LastWindowPixelSize: {x: 1920, y: 879.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 02620000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8f9ffffe6faffff
+      m_ExpandedIDs: 40f8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -661,9 +661,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.0937965, y: -17.588577, z: 20.074898}
+    m_Target: {x: -31.470427, y: -2.1012554, z: 3.2408924}
     speed: 2
-    m_Value: {x: -11.980203, y: 1.0082047, z: 3.3606884}
+    m_Value: {x: -31.470427, y: -2.1012554, z: 3.2408924}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -710,13 +710,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14705765, y: 0.24473143, z: -0.037748195, w: 0.9577504}
+    m_Target: {x: 0.11429912, y: 0.07709991, z: -0.00906016, w: 0.99052536}
     speed: 2
-    m_Value: {x: -0.019433012, y: 0.98001736, z: -0.12234646, w: -0.1556265}
+    m_Value: {x: -0.11429912, y: -0.07709991, z: 0.00906016, w: -0.99052536}
   m_Size:
-    m_Target: 4.3011627
+    m_Target: 11.735994
     speed: 2
-    m_Value: 1.9986658
+    m_Value: 11.735994
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -782,22 +782,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\shiva\Documents\Github\Viceral-Studio\Malice
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2.2000122}
-    m_SelectedIDs: de610000
-    m_LastClickedID: 25054
-    m_ExpandedIDs: 000000009c6100009e610000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000
+    scrollPos: {x: 0, y: 67.20062}
+    m_SelectedIDs: 98ac0000
+    m_LastClickedID: 44184
+    m_ExpandedIDs: 000000006aac00006cac00006eac000070ac000072ac000074ac000076ac000078ac00007aac00007cac00007eac0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -825,7 +825,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c6100009e610000a0610000a2610000a4610000a6610000a8610000aa610000ac610000ae610000b0610000
+    m_ExpandedIDs: 000000006aac00006cac00006eac000070ac000072ac000074ac000076ac000078ac00007aac00007cac00007eac0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
