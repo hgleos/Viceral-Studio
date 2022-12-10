@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPickUp : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class PlayerPickUp : MonoBehaviour
         }
         else if (tag == "LevelOneKey")
             keyBehavior.hasLevelOnekey = true;
+
     }
 
     private void Interact()

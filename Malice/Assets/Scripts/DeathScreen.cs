@@ -17,7 +17,8 @@ public class DeathScreen : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene(1);
+        // SceneManager.LoadScene(1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel")); // This loads the level the player was on before the death screen
     }
 
     public void quitGame()
