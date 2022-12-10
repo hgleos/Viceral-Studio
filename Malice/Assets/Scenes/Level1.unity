@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 100750002}
   - component: {fileID: 100750001}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Next Level Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100750000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.446, y: -1.7817, z: 5.5257}
+  m_LocalPosition: {x: -15.06, y: -0.617, z: 5.426}
   m_LocalScale: {x: 0.0001, y: 2.0424225, z: 2.2005491}
   m_ConstrainProportionsScale: 0
   m_Children: []
