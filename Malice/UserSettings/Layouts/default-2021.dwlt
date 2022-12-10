@@ -119,7 +119,9 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+
+  controlID: 16085
+
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +146,9 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 107
+
+  controlID: 16091
+
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +173,9 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 108
+
+  controlID: 16092
+
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +193,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 290.4
-    height: 428
+
+    width: 228
+    height: 769
+
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -211,10 +219,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 290.4
+
+    x: 228
     y: 0
-    width: 882.4
-    height: 428
+    width: 1727
+    height: 769
+
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -296,9 +306,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 485
+    x: 229
     y: 19
-    width: 1469
+    width: 1725
     height: 748
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -389,33 +399,37 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73.6
-    width: 289.4
-    height: 407
+
+    y: 73
+    width: 227
+    height: 748
+
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 72780000
+
+      scrollPos: {x: 0, y: 201}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a4faffff
+      m_ExpandedIDs: f267feff2c68feff3068feffa869feffe469feffd876feffbe83feffd0befeff54d7feff78d7feffbad9fefff4d9feff08ecfeff86f0feffb6f0feffcef0feffccf2feffe0f2fefff4f2feff08f3feff1cf3feff30f3feff44f3feff8009fffff20bffff5e54ffff6caaffffa8aaffff46fafffffcfaffff36fbffff56600000
+
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Point Light
+        m_OriginalName: Point Light
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -122426
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -445,10 +459,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 290.4
-    y: 73.6
-    width: 880.4
-    height: 407
+
+    x: 228
+    y: 73
+    width: 1725
+    height: 748
+
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -652,18 +668,20 @@ MonoBehaviour:
       index: 11
       layout: 4
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.244596, y: 1.5985733, z: -12.136751}
+
+    m_Target: {x: 38.479034, y: 4.0698586, z: -42.40622}
+
     speed: 2
-    m_Value: {x: -13.321001, y: -1.4360011, z: 5.4359994}
+    m_Value: {x: 38.479034, y: 4.0698586, z: -42.40622}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -710,13 +728,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.17653257, y: 0.23261592, z: -0.042976297, w: -0.95547}
+
+    m_Target: {x: 0.01849783, y: 0.67565334, z: -0.018014483, w: 0.73692065}
+
     speed: 2
-    m_Value: {x: 0.21319023, y: 0.60833365, z: -0.17483848, w: 0.74436337}
+    m_Value: {x: 0.018522736, y: 0.6744709, z: -0.017984683, w: 0.7378499}
   m_Size:
-    m_Target: 0.6082179
+
+    m_Target: 0.8660254
+
     speed: 2
-    m_Value: 1.2835498
+    m_Value: 0.86602604
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -782,22 +804,28 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/DarkFantasyKit [Free]/Readme
+
+    - Assets/Prefabs
+
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/DarkFantasyKit [Free]/Readme
+
+  - Assets/Prefabs
+
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\shiva\Documents\Github\Viceral-Studio\Malice
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 78780000
-    m_LastClickedID: 30840
-    m_ExpandedIDs: 00000000687700006a7700006c7700006e77000070770000727700007477000076770000787700007a7700007c7700007e77000094770000
+
+    m_SelectedIDs: 5ca90000
+    m_LastClickedID: 43356
+    m_ExpandedIDs: 0000000026a9000028a900002aa900002ca900002ea9000030a9000032a9000034a9000036a9000038a900003aa90000
+
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -825,7 +853,9 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000687700006a7700006c7700006e77000070770000727700007477000076770000787700007a7700007c7700007e770000
+
+    m_ExpandedIDs: 0000000026a9000028a900002aa900002ca900002ea9000030a9000032a9000034a9000036a9000038a900003aa90000
+
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -852,7 +882,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -869,7 +899,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
