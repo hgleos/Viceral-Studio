@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
-public class FloatingJumpScare : MonoBehaviour
+public class Level3FloatingJumpscare : MonoBehaviour
 {
     public AudioSource Scream;
     public GameObject enemy;
@@ -35,7 +35,7 @@ public class FloatingJumpScare : MonoBehaviour
 
     IEnumerator EndJump()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1.5f);
         enemy.SetActive(false);
         trigger.SetActive(false);
     }
