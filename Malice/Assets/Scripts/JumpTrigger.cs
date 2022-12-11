@@ -8,6 +8,8 @@ public class JumpTrigger : MonoBehaviour
    public GameObject RImage;
    public GameObject JumpCam;
    public GameObject FlashImg;
+   bool checkIfPlayed = false;
+
 
    void Start()
    {
@@ -18,7 +20,11 @@ public class JumpTrigger : MonoBehaviour
 
    void OnTriggerEnter()
    {
-        Scream.Play();
+        if (checkIfPlayed==false)
+        {
+         Scream.Play();
+        }
+        checkIfPlayed=true;
         RImage.SetActive(true);
         JumpCam.SetActive(true);
         FlashImg.SetActive(true);
