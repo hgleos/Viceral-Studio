@@ -72,7 +72,7 @@ public class MutantAIScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) < 1.1)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
     }
 
