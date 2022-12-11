@@ -6,19 +6,19 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class OpeningTextScene1 : MonoBehaviour
 {
-    //public GameObject Player;
+    public GameObject Player;
     //public GameObject FadeScreenIn;
     public GameObject TextBox;
     // Start is called before the first frame update
     void Start()
     {
-        //Player.GetComponent<FirstPersonController>().enabled = false;
+        Player.GetComponent<FirstPersonController>().enabled = false;
         StartCoroutine(ScenePlayer());
     }
 
     IEnumerator ScenePlayer()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         //FadeScreenIn.SetActive(false);
         TextBox.GetComponent<Text>().text = "Where am I...?";
         yield return new WaitForSeconds(3f);
@@ -39,6 +39,6 @@ public class OpeningTextScene1 : MonoBehaviour
         TextBox.GetComponent<Text>().text = "Looks like a flashlight on that couch...";
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
-        //Player.GetComponent<FirstPersonController>().enabled = true;        
+        Player.GetComponent<FirstPersonController>().enabled = true;        
     }
 }
