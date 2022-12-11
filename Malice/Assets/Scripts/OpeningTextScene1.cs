@@ -32,10 +32,10 @@ public class OpeningTextScene1 : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(1f);
-        TextBox.GetComponent<Text>().text = "I need to get out of this place.";
-        yield return new WaitForSeconds(3f);
-        TextBox.GetComponent<Text>().text = "";
-        yield return new WaitForSeconds(1f);
+        // TextBox.GetComponent<Text>().text = "I need to get out of this place.";
+        // yield return new WaitForSeconds(3f);
+        // TextBox.GetComponent<Text>().text = "";
+        // yield return new WaitForSeconds(1f);
         TextBox.GetComponent<Text>().text = "Looks like a flashlight on that couch...";
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
