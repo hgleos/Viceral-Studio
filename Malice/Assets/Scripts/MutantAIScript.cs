@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MutantAIScript : MonoBehaviour
 {
@@ -33,8 +34,6 @@ public class MutantAIScript : MonoBehaviour
     bool m_PlayerNear;                              //  If the player is near, state of hearing
     bool m_IsPatrol;                                //  If the enemy is patrol, state of patroling
     bool m_CaughtPlayer;                            //  if the enemy has caught the player
-    bool attackTrigger = false;
-    bool isAttacking = false;
 
     [SerializeField] private Animator anim;
     [SerializeField] private CurrentState m_CurrentState;
@@ -70,6 +69,11 @@ public class MutantAIScript : MonoBehaviour
         {
             Patrolling();
         }
+
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) < 1.1)
+        {
+            SceneManager.LoadScene(5);
+        }
     }
 
     private void AnimationChecker()
@@ -78,13 +82,11 @@ public class MutantAIScript : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isRunning", false);
-            //anim.SetBool("isAttacking", false);
         }
         else if (m_CurrentState == CurrentState.Walking)
         {
             anim.SetBool("isWalking", true);
             anim.SetBool("isRunning", false);
-            //anim.SetBool("isAttacking", false);
         }
         else if (m_CurrentState == CurrentState.Running)
         {
@@ -92,12 +94,6 @@ public class MutantAIScript : MonoBehaviour
             anim.SetBool("isRunning", true);
             //anim.SetBool("isAttacking", false);
         }
-        // else if (m_CurrentState == CurrentState.Attacking)
-        // {
-        //     anim.SetBool("isWalking", false);
-        //     anim.SetBool("isRunning", false);
-        //     anim.SetBool("isAttacking", true);
-        // }
     }
  
     private void Chasing()
@@ -132,18 +128,6 @@ public class MutantAIScript : MonoBehaviour
                 m_WaitTime -= Time.deltaTime;
             }
         }
-        // if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 0.5f)
-        // {
-        //     //m_CaughtPlayer = true;
-        //     attackTrigger = true;
-        //     m_CurrentState = CurrentState.Attacking;
-        // }
-        // else
-        // {
-        //     m_CaughtPlayer = false;
-        //     attackTrigger = false;
-        //     m_CurrentState = CurrentState.Running;
-        // }
     }
  
     private void Patrolling()
@@ -316,7 +300,6 @@ public class MutantAIScript : MonoBehaviour
     {
         Idle,
         Walking,
-        Running,
-        Attacking
+        Running
     }
 }
