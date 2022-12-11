@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DeathScreen : MonoBehaviour
 {
     [SerializeField] GameObject tryAgainUI;
+    [SerializeField] GameObject quitToMMUI;
     [SerializeField] GameObject quitUI;
 
     void Start()
@@ -21,6 +22,10 @@ public class DeathScreen : MonoBehaviour
         SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel")); // This loads the level the player was on before the death screen
     }
 
+    public void quitToMMGame()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void quitGame()
     {
         Application.Quit();
@@ -30,6 +35,7 @@ public class DeathScreen : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         tryAgainUI.SetActive(true);
+        quitToMMUI.SetActive(true);
         quitUI.SetActive(true);
     }
 }
