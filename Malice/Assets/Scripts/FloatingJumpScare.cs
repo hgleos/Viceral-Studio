@@ -9,6 +9,7 @@ public class FloatingJumpScare : MonoBehaviour
     public GameObject enemy;
     bool checkIfPlayed = false;
     public Rig RigLayer;
+    public GameObject trigger;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +37,6 @@ public class FloatingJumpScare : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
         enemy.SetActive(false);
+        trigger.SetActive(false);
     }
 }

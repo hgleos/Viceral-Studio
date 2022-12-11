@@ -6,6 +6,7 @@ public class JumpWithoutCamera : MonoBehaviour
 {
     public AudioSource Scream;
     public GameObject enemy;
+    public GameObject trigger;
     bool checkIfPlayed = false;
 
 
@@ -30,6 +31,7 @@ public class JumpWithoutCamera : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         enemy.SetActive(false);
+        trigger.SetActive(false);
     }
 
 }
