@@ -19,15 +19,15 @@ public class OpeningTextScene3 : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(1f);
-        TextBox.GetComponent<Text>().text = "I've got to be close to exit by now...";
+        TextBox.GetComponent<Text>().text = "I've got to be close to the exit by now...";
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(1f);
-        TextBox.GetComponent<Text>().text = "The voices are getting louder...";
+        TextBox.GetComponent<Text>().text = "...the voices are getting louder...";
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(1f);
-        TextBox.GetComponent<Text>().text = "I NEED to get out of here.";
+        TextBox.GetComponent<Text>().text = "I NEED to get out of this damn place.";
         yield return new WaitForSeconds(3f);
         TextBox.GetComponent<Text>().text = "";  
     }
