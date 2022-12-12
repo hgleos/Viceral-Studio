@@ -5745,11 +5745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585269041540, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_Range
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585269041540, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_Intensity
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585273335788, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_Range
@@ -6121,11 +6121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585582322945, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_Range
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585582322945, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_Intensity
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3632798585582702712, guid: 2650f6a8eba2d1a41944f00826ae999c, type: 3}
       propertyPath: m_NavMeshLayer
@@ -7971,7 +7971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   light1: {fileID: 1455416998}
   minimumTime: 0.1
-  maximumTime: 1.2
+  maximumTime: 1
   timer: 0
 --- !u!114 &1455417002
 MonoBehaviour:
@@ -7987,7 +7987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   light1: {fileID: 1455417000}
   minimumTime: 0.1
-  maximumTime: 1.2
+  maximumTime: 1
   timer: 0
 --- !u!1 &1530037014
 GameObject:
