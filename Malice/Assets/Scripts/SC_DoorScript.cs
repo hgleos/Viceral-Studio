@@ -58,7 +58,7 @@ public class SC_DoorScript : MonoBehaviour
 
         if (enter && !hasKey)
         {
-            GUI.Label(new Rect(Screen.width / 2 - 25, Screen.height - 500, 155, 30), "Door is Locked", myStyle);
+            GUI.Label(new Rect(Screen.width / 2 - 25, Screen.height - 500, 155, 30), "Door is locked. Need a key.", myStyle);
 
         }   
         else if (enter)
